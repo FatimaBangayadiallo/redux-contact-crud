@@ -13,7 +13,7 @@ const DisplayContact = (props) => {
               <OneContact
                 contactInfo={contact}
                 key={contact.id}
-                DeleteContact={props.DeleteContact}
+                deleteContact={props.deleteContact}
                 EditContact={props.EditContact}
               />
             );

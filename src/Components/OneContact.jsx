@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Card, Col, Button, Modal } from "react-bootstrap";
 import EditContactForm from "./EditContact";
+import { connect } from "react-redux";
+import { deleteContact } from "../actions/contactAction";
 
 const OneContact = (props) => {
   // the modal state
@@ -13,7 +15,8 @@ const OneContact = (props) => {
   // the handleDelete event handler function
   const handleDelelte = (e) => {
     e.preventDefault();
-    props.DeleteContact(props.contactInfo.id);
+    console.log("id pass to the props", props.contactInfo);
+    props.deleteContact(props.contactInfo.id);
   };
 
   return (
@@ -66,4 +69,8 @@ const OneContact = (props) => {
     </>
   );
 };
-export default OneContact;
+
+const mapDispatchToProps = {
+  deleteContact,
+};
+export default connect(null, mapDispatchToProps)(OneContact);

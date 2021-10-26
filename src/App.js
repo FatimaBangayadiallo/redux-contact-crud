@@ -34,22 +34,22 @@ class App extends React.Component {
   //  add new contact function------------------------------------------
 
   // delete a spaecific eleemt in the array funcrion---------------------------
-  DeleteContact = (id) => {
-    let undeletedContacts = this.state.contacts.filter(
-      (contact) => contact.id !== id
-    );
-    this.setState({
-      contacts: undeletedContacts,
-    });
-  };
+  //  DeleteContact = (id) => {
+  //   let undeletedContacts = this.state.contacts.filter(
+  //     (contact) => contact.id !== id
+  //   );
+  //   this.setState({
+  //     contacts: undeletedContacts,
+  //   });
+  // };
   // editt a new contact function--------------------------------------
-  EditContact = (id, updatedContact) => {
-    this.setState({
-      contacts: this.state.contacts.map((contact) =>
-        contact.id === id ? updatedContact : contact
-      ),
-    });
-  };
+  // EditContact = (id, updatedContact) => {
+  //   this.setState({
+  //     contacts: this.state.contacts.map((contact) =>
+  //       contact.id === id ? updatedContact : contact
+  //     ),
+  //   });
+  // };
 
   // render method-------------------------------------------------
   render() {
